@@ -79,7 +79,7 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 			{
 				path: '/explore',
 				name: 'explore',
-				component: () => import('../views/pequod/index.vue'),
+				component: () => import('../views/Explore/index.vue'),
 				meta: {
 					title: 'message.router.explore',
 					isLink: '',

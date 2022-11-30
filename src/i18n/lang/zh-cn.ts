@@ -49,6 +49,11 @@ export default {
 		userInfo:'个人资料',
 		userCollection:'collection',
 	},
+	// explore页面
+	explore:{
+		explorePagePrice:'价格',
+		explorePageBuy:'购买'
+	},
 
 	staticRoutes: {
 		signIn: '登录',
