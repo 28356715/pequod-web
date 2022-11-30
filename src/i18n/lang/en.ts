@@ -47,6 +47,10 @@ export default {
 			userInfo:'profile',
 			userCollection:'collection',
 		},
+		explore:{
+			explorePagePrice:'Price',
+			explorePageBuy:'Buy'
+		},
 
 	staticRoutes: {
 		signIn: 'signIn',

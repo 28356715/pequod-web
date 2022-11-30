@@ -48,6 +48,10 @@ export default {
 				userInfo:'hồ',
 				userCollection:'sưu tập',
 			},
+			explore:{
+				explorePagePrice:'giá',
+				explorePageBuy:'Mua'
+			},
 
 	staticRoutes: {
 		signIn: '登入',
