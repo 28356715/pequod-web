@@ -1,7 +1,14 @@
 <template>
 	<div>
 		<el-row>
-		<el-col :span="12" :offset="6">
+		<el-col  
+		        :xs="24"
+				:sm="24"
+				:md="24"
+				:lg="12"
+				:xl="12"
+				:push="push"
+		>
 			<el-form
 				ref="form"
 				:model="sizeForm"
@@ -92,6 +99,8 @@ import { toRefs, reactive, defineComponent, onMounted, ref, watch, nextTick, onA
 import Detail from '/@/views/pequod/detail.vue';
 import { Plus } from '@element-plus/icons-vue';
 import type { UploadProps, UploadUserFile,FormRules } from 'element-plus';
+import other from '/@/utils/other';
+
 
 
 let global: any = {
@@ -109,6 +118,7 @@ export default defineComponent({
         const dialogVisible = ref(false)
 		const size = ref('default')
         const labelPosition = ref('right')
+		const push = ref(6)
 	
 		const state = reactive({
 			formAccessibility: 
@@ -148,6 +158,14 @@ export default defineComponent({
            dialogImageUrl.value = uploadFile.url!
            dialogVisible.value = true
          }
+
+		 onMounted(() => {
+			push.value = other.isMobile()?0:6
+			console.log("push==",push.value)
+		});
+
+		
+
 		return {
 			dialogVisible,
 			dialogImageUrl,
@@ -156,6 +174,7 @@ export default defineComponent({
 			onSubmit,
 			size,
 			labelPosition,
+			push,
 			...toRefs(state),
 			// ...toRefs(rules),
 		};
