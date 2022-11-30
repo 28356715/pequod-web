@@ -18,14 +18,13 @@
                     </el-row>
                     <el-row>{{v.udid}}{{v.name}}</el-row>
                     <el-row>
-                        <el-popover placement="bottom" :width="400" trigger="click">
+                        <el-popover placement="bottom" :width="500" trigger="click">
                                       <template #reference>
                                         <el-button class="button-loot-style button-style">{{$t('message.treasure.treasureActivityButton2')}}</el-button>
                                       </template>
                                       <el-form
                                         ref="eventFormRef"
                                         :model="treasureTask"
-                                        label-width="120px"
                                         class="demo-dynamic"
                                       >
                                         <el-form-item
@@ -39,7 +38,7 @@
                                             },
                                           ]"
                                         >
-                                        <el-input v-model="treasureTask.totalPricing" />{{treasureTask.settlementUnit}}
+                                        <el-input v-model="treasureTask.totalPricing" style="width:50%"/>{{treasureTask.settlementUnit}}
                                         </el-form-item>
                                             <el-form-item :label="$t('message.treasure.treasureActivitySplitsNum')">
                                               <el-radio-group v-model="treasureTask.totalCopies">
@@ -66,12 +65,12 @@
                                             <el-form-item
                                                 prop="price"
                                                 :label="$t('message.treasure.treasureActivityReward')">
-                                                <el-input v-model="treasureTask.reward" />{{treasureTask.rewardUnit}}
+                                                <el-input v-model="treasureTask.reward" style="width:50%"/>{{treasureTask.rewardUnit}}
                                             </el-form-item>
                                             <el-form-item
                                                 prop="price"
                                                 :label="$t('message.treasure.treasureActivityTicket')">
-                                                <el-input v-model="treasureTask.tickets" />{{treasureTask.rewardUnit}}
+                                                <el-input v-model="treasureTask.tickets" style="width:50%"/>{{treasureTask.rewardUnit}}
                                             </el-form-item>
                                         <el-form-item>
                                           <el-button  class="button-loot-style">{{$t('message.treasure.treasureActivityButton2')}}</el-button>
@@ -83,9 +82,7 @@
 			</el-col>
 		</el-row>
 	</div>
-	<el-drawer v-model="drawer"  :with-header="false" :direction="direction" size="50%">
-    <Detail/>
-  </el-drawer>
+
 </template>
 
 <script lang="ts" >
@@ -94,7 +91,6 @@ import * as echarts from 'echarts';
 import { storeToRefs } from 'pinia';
 import { useThemeConfig } from '/@/stores/themeConfig';
 import { useTagsViewRoutes } from '/@/stores/tagsViewRoutes';
-import Detail from '/@/views/pequod/detail.vue';
 import other from '/@/utils/other';
 
 
@@ -107,7 +103,7 @@ let global: any = {
 
 export default defineComponent({
 	name: 'home',
-	components: { Detail },
+	components: {  },
 	setup() {
 		const homeLineRef = ref();
 		const homePieRef = ref();
