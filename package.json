@@ -10,7 +10,7 @@
 		"lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue src/"
 	},
 	"dependencies": {
-		"@element-plus/icons-vue": "^2.0.6",
+		"@element-plus/icons-vue": "^2.0.10",
 		"@wangeditor/editor": "^5.1.11",
 		"axios": "^0.27.2",
 		"countup.js": "^2.3.2",

@@ -105,7 +105,22 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 					roles: ['admin', 'common'],
 					icon: 'iconfont icon-shouye',
 				},
-		},		
+		    },	
+			{
+				path: '/collection',
+				name: 'collection',
+				component: () => import('../views/user/index.vue'),
+				meta: {
+					title: 'message.router.Collection',
+					isLink: '',
+					isHide: true,
+					isKeepAlive: true,
+					isAffix: true,
+					isIframe: false,
+					roles: ['admin', 'common'],
+					// icon: 'iconfont icon-shouye',
+				},
+			},	
 		],
 	},
 ];

@@ -8,6 +8,7 @@ export default {
 			pequod: 'Pequod',
 			explore: 'Explore',
 			create: 'Create',
+			collection:'Bộ',
 		},
 		//create页面 字段配置
 		create:{
@@ -43,12 +44,17 @@ export default {
 			
 			},
 
+			user:{
+				userInfo:'hồ',
+				userCollection:'sưu tập',
+			},
+
 	staticRoutes: {
 		signIn: '登入',
 		notFound: '找不到此頁面',
 		noPower: '沒有許可權',
 	},
-	user: {
+	user1: {
 		title0: '組件大小',
 		title1: '語言切換',
 		title2: '選單蒐索',

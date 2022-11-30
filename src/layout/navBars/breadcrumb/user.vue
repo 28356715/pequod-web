@@ -1,8 +1,8 @@
 <template>
 	<div class="layout-navbars-breadcrumb-user pr15" :style="{ flex: layoutUserFlexNum }">
-		<el-dropdown :show-timeout="70" :hide-timeout="50" trigger="click" @command="onLanguageChange">
+		<el-dropdown :show-timeout="70" :hide-timeout="50" trigger="click" @command="onLanguageChange" class="m10">
 			<div class="layout-navbars-breadcrumb-user-icon">
-				<i class="iconfont" :class="disabledI18n === 'en' ? 'icon-fuhao-yingwen' : 'icon-fuhao-zhongwen'" :title="$t('message.user.title1')"></i>
+				<i class="iconfont" style="font-size: 25px;" :class="disabledI18n === 'en' ? 'icon-fuhao-yingwen' : 'icon-fuhao-zhongwen'" :title="$t('message.user.title1')"></i>
 			</div>
 			<template #dropdown>
 				<el-dropdown-menu>
@@ -14,11 +14,8 @@
 			</template>
 		</el-dropdown>
 		
-		<div class="layout-navbars-breadcrumb-user-icon" @click="onLayoutSetingClick">
-			<i class="icon-skin iconfont" :title="$t('message.user.title3')"></i>
-		</div>
 		<!-- 个人中心 -->
-		<el-dropdown :show-timeout="70" :hide-timeout="50" @command="onHandleCommandClick">
+		<el-dropdown :show-timeout="70" :hide-timeout="50" @command="onHandleCommandClick" class="m10">
 			<span class="layout-navbars-breadcrumb-user-link">
 				<img :src="userInfos.photo" class="layout-navbars-breadcrumb-user-link-photo mr5" />
 				{{ userInfos.userName === '' ? 'common' : userInfos.userName }}
@@ -28,16 +25,15 @@
 			</span>
 			<template #dropdown>
 				<el-dropdown-menu>
-					<el-dropdown-item command="/home">{{ $t('message.user.dropdown1') }}</el-dropdown-item>
-					<el-dropdown-item command="wareHouse">{{ $t('message.user.dropdown6') }}</el-dropdown-item>
-					<el-dropdown-item command="/personal">{{ $t('message.user.dropdown2') }}</el-dropdown-item>
-					<el-dropdown-item command="/404">{{ $t('message.user.dropdown3') }}</el-dropdown-item>
-					<el-dropdown-item command="/401">{{ $t('message.user.dropdown4') }}</el-dropdown-item>
-					<el-dropdown-item divided command="logOut">{{ $t('message.user.dropdown5') }}</el-dropdown-item>
+					<el-dropdown-item command="/home">{{ $t('message.user.userInfo') }}</el-dropdown-item>
+					<el-dropdown-item command="/collection">{{ $t('message.user.userCollection') }}</el-dropdown-item>
 				</el-dropdown-menu>
 			</template>
 		</el-dropdown>
-		<Search ref="searchRef" />
+		<div style="font-size: 25px" class="m10">
+			<WalletFilled style="width: 1em; height: 1em; margin-right: 8px" />	
+		</div>
+
 	</div>
 </template>
 
@@ -260,6 +256,9 @@ export default defineComponent({
 	}
 	:deep(.el-badge__content.is-fixed) {
 		top: 12px;
+	}
+	.m10 {
+		margin-right: 10px;
 	}
 }
 </style>

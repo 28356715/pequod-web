@@ -7,7 +7,8 @@ export default {
 		earn: 'Earn',
 		pequod: 'Pequod',
 		explore: 'Explore',
-		create: 'Create--0000',
+		create: 'Create',
+		collection:'Collection',
 		},
 		
 		//Create Page Field Configuration
@@ -41,12 +42,18 @@ export default {
 		  treasureRecord: 'Treasure snatching record',
 		  refundRecord: 'Refund record',
 		},
+
+		user:{
+			userInfo:'profile',
+			userCollection:'collection',
+		},
+
 	staticRoutes: {
 		signIn: 'signIn',
 		notFound: 'notFound',
 		noPower: 'noPower',
 	},
-	user: {
+	user1: {
 		title0: 'Component size',
 		title1: 'Language switching',
 		title2: 'Menu search',

@@ -8,6 +8,7 @@ export default {
 		pequod: 'Pequod',
 		explore: 'Explore',
 		create: 'Create',
+		collection:'Collection',
 	},
 	//create页面 字段配置
 	create:{
@@ -42,6 +43,11 @@ export default {
 
 		treasureRecord:'夺宝记录',
 		refundRecord:'退款记录',
+	},
+	//用户界面
+	user:{
+		userInfo:'个人资料',
+		userCollection:'collection',
 	},
 
 	staticRoutes: {

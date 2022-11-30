@@ -20,7 +20,7 @@
                     <el-row>
                         <el-popover placement="bottom" :width="400" trigger="click">
                                       <template #reference>
-                                        <el-button class="button-loot-style">{{$t('message.treasure.treasureActivityButton2')}}</el-button>
+                                        <el-button class="button-loot-style button-style">{{$t('message.treasure.treasureActivityButton2')}}</el-button>
                                       </template>
                                       <el-form
                                         ref="eventFormRef"
